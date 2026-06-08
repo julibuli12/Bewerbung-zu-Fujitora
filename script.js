@@ -1,15 +1,19 @@
-const pages = [...document.querySelectorAll('.page')];
-const links = [...document.querySelectorAll('.nav a')];
+const revealObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('visible');
+  });
+},{threshold:.18});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
 
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      links.forEach(link => link.classList.remove('active'));
-      const active = links.find(link => link.getAttribute('href') === '#' + entry.target.id);
-      if (active) active.classList.add('active');
+const links=[...document.querySelectorAll('.nav a')];
+const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const navObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(a=>a.classList.remove('active'));
+      const active=links.find(a=>a.getAttribute('href')==='#'+e.target.id);
+      if(active)active.classList.add('active');
     }
   });
-}, { threshold: 0.55 });
-
-pages.forEach(page => obs.observe(page));
+},{threshold:.45});
+sections.forEach(s=>navObs.observe(s));
