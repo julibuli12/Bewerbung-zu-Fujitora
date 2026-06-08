@@ -16,15 +16,15 @@
 <circle cx="820" cy="300" r="260" fill="url(#g)" opacity=".9"/>
 <circle cx="825" cy="300" r="210" fill="none" stroke="#b184ff" stroke-width="2" opacity=".45"/>
 <circle cx="835" cy="310" r="320" fill="none" stroke="#7841d6" stroke-width="2" opacity=".2"/>
-<circle cx="760" cy="150" r="58" fill="#9b55ff" opacity=".55"/><path d="M650 80 L880 260" stroke="#b98cff" stroke-width="6" opacity=".45"/><circle cx="870" cy="260" r="22" fill="#c9a1ff" opacity=".8"/>
+<path d="M600 400 h380 l-60 70 H660z" fill="#1f1430" stroke="#8f59ff" stroke-width="3"/><path d="M720 400 v-220 l120 80 -120 60" fill="none" stroke="#cab2ff" stroke-width="5"/>
 <!-- stylized admiral silhouette -->
 <path d="M470 545 C495 395 530 280 610 220 C655 185 730 180 775 225 C850 300 885 405 930 545 Z" fill="#08050c" opacity=".92" stroke="#6f3bd1" stroke-width="3"/>
 <path d="M575 545 C590 405 620 280 690 245 C755 280 790 405 805 545 Z" fill="#1d1230" opacity=".95"/>
 <circle cx="690" cy="200" r="62" fill="#050408" stroke="#d8c7ff" stroke-width="3"/>
 <path d="M625 280 C540 320 500 420 470 545 M755 280 C860 330 900 445 930 545" stroke="#d9d0f2" stroke-width="10" opacity=".65"/>
 <path d="M690 260 v260" stroke="#d8d0ee" stroke-width="10" stroke-linecap="round"/>
-<text x="70" y="115" fill="#d9d0ee" font-size="46" font-family="Georgia,serif" font-weight="700">BEWERBUNG ZU FUJITORA</text>
-<text x="75" y="165" fill="#a96bff" font-size="22" font-family="Arial" letter-spacing="6">ISSHO · MARINE · GERECHTIGKEIT</text>
+<text x="70" y="115" fill="#d9d0ee" font-size="46" font-family="Georgia,serif" font-weight="700">SCHLUSSWORT</text>
+<text x="75" y="165" fill="#a96bff" font-size="22" font-family="Arial" letter-spacing="6">JULIAN · FEEDBACK</text>
 <path d="M70 190 h330" stroke="#8e55ff" stroke-width="3"/>
 <g opacity=".45">
 <circle cx="130" cy="520" r="4" fill="#b47aff"/><circle cx="160" cy="495" r="3" fill="#b47aff"/><circle cx="1020" cy="90" r="5" fill="#b47aff"/>
