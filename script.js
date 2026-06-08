@@ -1,24 +1,23 @@
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
+    if(entry.isIntersecting){ entry.target.classList.add('visible'); }
   });
 },{threshold:.16});
+
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 const links=[...document.querySelectorAll('.side-nav a')];
 const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
-const navObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
+const navObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
       links.forEach(a=>a.classList.remove('active'));
-      const active=links.find(a=>a.getAttribute('href')==='#'+e.target.id);
+      const active=links.find(a=>a.getAttribute('href')==='#'+entry.target.id);
       if(active) active.classList.add('active');
     }
   });
-},{threshold:.45});
-sections.forEach(s=>navObs.observe(s));
+},{threshold:.42});
+sections.forEach(s=>navObserver.observe(s));
 
 const modal=document.getElementById('modal');
 const modalImg=modal.querySelector('img');
