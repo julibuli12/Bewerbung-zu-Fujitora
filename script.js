@@ -1,15 +1,15 @@
-const pages=[...document.querySelectorAll('.page')];
-const links=[...document.querySelectorAll('.nav a')];
+const pages = [...document.querySelectorAll('.page')];
+const links = [...document.querySelectorAll('.nav a')];
 
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      links.forEach(a=>a.classList.remove('active'));
-      const link=links.find(a=>a.getAttribute('href')==='#'+e.target.id);
-      if(link) link.classList.add('active');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      links.forEach(link => link.classList.remove('active'));
+      const active = links.find(link => link.getAttribute('href') === '#' + entry.target.id);
+      if (active) active.classList.add('active');
     }
   });
-},{threshold:.55});
+}, { threshold: 0.55 });
 
-pages.forEach(p=>obs.observe(p));
+pages.forEach(page => obs.observe(page));
